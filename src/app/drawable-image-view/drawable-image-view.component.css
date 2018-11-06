@@ -1,0 +1,12 @@
+#divContainer {
+    position: relative;
+    width: 600px;
+    height: 600px;
+}
+
+canvas {
+    position: absolute;
+    top:  -2px;
+    left: -2px;
+    border: black solid 2px;
+}

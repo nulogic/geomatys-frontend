@@ -1,0 +1,11 @@
+<div id="divContainer">
+  <img  [src] = "imagePath" 
+        [width]="imageWidth"
+        [height]="imageHeight"  
+        (load)="onImageChange()" alt=""  #bgimage/>
+  <canvas [width]="canvasWidth" [height]="canvasHeight"
+          (mousedown) = "startDraw($event)"
+          (mousemove) = "draw($event)"
+          (mouseup) = "endDraw($event)" 
+          #canvas></canvas>
+</div>

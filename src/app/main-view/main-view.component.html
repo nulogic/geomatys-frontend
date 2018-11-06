@@ -1,0 +1,17 @@
+<input type="file" (change)="changeBG($event)"/>
+<button (click)="send()">Analyze</button>
+<br/>
+<br/>
+<br/>
+<div class="flexContainer">
+  <app-drawable-image-view [filePath]="filePath" (roiChanged)="onRoiChanged($event)" #drawableImView></app-drawable-image-view>
+  <form >
+    <h2>ROI coordinates</h2>
+    <label>X0<input [value]="roi[0]" (keyup.enter)="$event.target.blur()" (blur)="updateRoi($event)" name="x0ROI"></label>
+    <label>Y0<input [value]="roi[1]" (keyup.enter)="$event.target.blur()" (blur)="updateRoi($event)" name="y0ROI" ></label>
+    <label>Width:<input [value]="roi[2]" (keyup.enter)="$event.target.blur()" (blur)="updateRoi($event)" name="widthROI"></label>
+    <label>Height:<input [value]="roi[3]" (keyup.enter)="$event.target.blur()" (blur)="updateRoi($event)" name="heightROI"></label>
+  </form>
+  <img [src]="otputImage" alt="" (load)="onImageChange($event)" [width]="outputWidth" [height]="outputHeight" id="outputIm">   
+</div>
+

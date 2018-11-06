@@ -1,0 +1,25 @@
+.flexContainer {
+    display: flex;
+    flex-flow: row;
+}
+
+form {
+    margin: 0 2em;
+}
+
+label {
+    display: block;
+    width: 120px;
+    clear: both;
+    margin-bottom: 0.5em;
+}
+
+form input {
+    float: right;
+    width: 50px;
+}
+
+#outputIm {
+    border: black solid 2px;
+}
+
